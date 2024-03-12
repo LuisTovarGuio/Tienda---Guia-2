@@ -1,10 +1,10 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad Ean (Bogotá - Colombia)
- * Programa de Ingeniería de Sistemas
+ * Universidad Ean (Bogotï¿½ - Colombia)
+ * Programa de Ingenierï¿½a de Sistemas
  * Licenciado bajo el esquema Academic Free License version 2.1
  * <p>
- * Desarrollo de Software - Guía 2 - Actividad 2
+ * Desarrollo de Software - Guï¿½a 2 - Actividad 2
  * Ejercicio: tienda
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -78,7 +78,7 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
     private JLabel lblCantidadBodega;
 
     /**
-     * Etiqueta Cantidad mínima.
+     * Etiqueta Cantidad mï¿½nima.
      */
     private JLabel lblCantidadMinima;
 
@@ -113,7 +113,7 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
     private JTextField txtCantidadBodega;
 
     /**
-     * Campo de texto con la cantidad mínima de unidades para abastecer,
+     * Campo de texto con la cantidad mï¿½nima de unidades para abastecer,
      */
     private JTextField txtCantidadMinima;
 
@@ -123,17 +123,17 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
     private JTextField txtImagen;
 
     /**
-     * Botón para aceptar.
+     * Botï¿½n para aceptar.
      */
     private JButton btnAceptar;
 
     /**
-     * Botón para cancelar.
+     * Botï¿½n para cancelar.
      */
     private JButton btnCancelar;
 
     /**
-     * Botón seleccionar imagen
+     * Botï¿½n seleccionar imagen
      */
     private JButton btnSeleccionarImagen;
 
@@ -142,7 +142,7 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazTienda principal;
 
@@ -151,9 +151,9 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
     // -----------------------------------------------------------------
 
     /**
-     * Crea el diálogo para consultar ventas en volumen.
+     * Crea el diï¿½logo para consultar ventas en volumen.
      *
-     * @param pPrincipal      Ventana principal de la aplicación. pPrincipal != null.
+     * @param pPrincipal      Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      * @param pNombreProducto Nombre actual del producto. pNombreProducto != null && pNombreActual != "".
      */
     public DialogoCambiarProducto(InterfazTienda pPrincipal, String pNombreProducto) {
@@ -194,7 +194,7 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
         txtCantidadBodega = new JTextField();
         add(txtCantidadBodega);
 
-        lblCantidadMinima = new JLabel("Cantidad mínima:");
+        lblCantidadMinima = new JLabel("Cantidad mï¿½nima:");
         add(lblCantidadMinima);
         txtCantidadMinima = new JTextField();
         add(txtCantidadMinima);
@@ -228,13 +228,13 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
      * Manejo de los eventos de los botones.
      *
-     * @param pEvento Acción que generó el evento.
+     * @param pEvento Acciï¿½n que generï¿½ el evento.
      */
     public void actionPerformed(ActionEvent pEvento) {
         String comando = pEvento.getActionCommand();
@@ -256,7 +256,7 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
                     int cantidadMinima = Integer.parseInt(cantMinStr);
 
                     if (cantidadBodega < 0 || cantidadMinima < 0 || valorUnitario < 0) {
-                        JOptionPane.showMessageDialog(this, "La cantidad en bodega, cantidad mínima y valor unitario no pueden ser valores negativos.", "Cambiar producto", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "La cantidad en bodega, cantidad mï¿½nima y valor unitario no pueden ser valores negativos.", "Cambiar producto", JOptionPane.ERROR_MESSAGE);
                     } else {
                         String tipo = tipoStr.toLowerCase();
 
@@ -265,7 +265,7 @@ public class DialogoCambiarProducto extends JDialog implements ActionListener {
                     }
 
                 } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(this, "El valor unitario, cantidad en bodega, cantidad mínima deben ser valores numéricos.", "Cambiar producto", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "El valor unitario, cantidad en bodega, cantidad minima deben ser valores numericos.", "Cambiar producto", JOptionPane.ERROR_MESSAGE);
                 }
             }
         } else if (comando.equals(SELECCIONAR_IMAGEN)) {
